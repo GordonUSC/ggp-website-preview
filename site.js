@@ -30,6 +30,22 @@
     });
   }
 
+  // mobile nav toggle
+  const nav = document.querySelector('.nav');
+  const navToggle = document.querySelector('.nav-toggle');
+  if(nav && navToggle){
+    navToggle.addEventListener('click',()=>{
+      const isOpen = nav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    nav.querySelectorAll('.nav-links a').forEach(a=>{
+      a.addEventListener('click',()=>{
+        nav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded','false');
+      });
+    });
+  }
+
   // form fake-submit handling
   document.querySelectorAll('form[data-mailto]').forEach(form=>{
     form.addEventListener('submit',e=>{
