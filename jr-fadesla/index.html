@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0B0A09">
+<title>JR.FadesLA · Northridge Barber</title>
+<meta name="description" content="Texture-friendly fades, clean lines, calm chair. JR.FadesLA at The Good Vibe Barbershop in Northridge.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0B0A09;
+    --bg-2: #181613;
+    --cream: #F4EBDA;
+    --gold: #C99748;
+    --gold-2: #E5BB6E;
+    --red: #B7322C;
+    --muted: rgba(244,235,218,0.65);
+    --line: rgba(212,162,76,0.14);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.55;
+    overflow-x: hidden;
+  }
+  .wrap { max-width: 480px; margin: 0 auto; }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 60px 24px 36px;
+    background:
+      radial-gradient(80% 50% at 50% 0%, rgba(201,151,72,0.20) 0%, rgba(201,151,72,0) 60%),
+      radial-gradient(60% 60% at 50% 100%, rgba(183,50,44,0.10) 0%, transparent 70%),
+      var(--bg);
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+  }
+  .mark {
+    display: inline-flex; align-items: center; gap: 10px;
+    margin-bottom: 32px;
+    color: var(--gold);
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.28em;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+  .mark .pole {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px; border-radius: 50%;
+    background: linear-gradient(135deg, #B7322C 0%, #FFFFFF 50%, #1F4D8B 100%);
+    box-shadow: 0 2px 12px rgba(212,162,76,0.25), inset 0 -3px 6px rgba(0,0,0,0.3);
+    font-size: 16px;
+  }
+
+  h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 56px;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+    margin-bottom: 10px;
+    color: var(--cream);
+  }
+  .h1-italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--gold-2);
+  }
+  .handle {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+
+  .niche-block {
+    margin: 28px 0;
+    padding-left: 14px;
+    border-left: 2px solid var(--gold);
+  }
+  .niche-block .label {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.22em;
+    font-size: 11px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .niche-block p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.3;
+    color: var(--cream);
+  }
+
+  .cta-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    margin-top: 32px;
+  }
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 18px 14px;
+    border-radius: 999px;
+    font-weight: 600; font-size: 15px;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-2) 100%);
+    color: #1A1815;
+    box-shadow: 0 8px 24px rgba(201,151,72,0.4);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--cream);
+    border: 1px solid rgba(244,235,218,0.25);
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 18px; left: 50%; transform: translateX(-50%);
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+  section { padding: 56px 24px; }
+  .label {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.22em;
+    font-size: 12px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    font-size: 32px;
+    line-height: 1.1;
+    margin-bottom: 22px;
+  }
+  h2 .em {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--gold-2);
+  }
+
+  /* THE WORK */
+  .work {
+    background: linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 100%);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .craft-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  }
+  .craft {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px 16px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .craft:active { transform: scale(0.98); border-color: var(--gold); }
+  .craft .name {
+    font-weight: 700; font-size: 16px; color: var(--cream);
+    margin-bottom: 6px;
+  }
+  .craft .desc {
+    font-size: 13px; color: var(--muted);
+    line-height: 1.45;
+  }
+
+  /* PORTFOLIO PLACEHOLDER */
+  .portfolio {
+    margin-top: 28px;
+  }
+  .portfolio-note {
+    background: rgba(201,151,72,0.08);
+    border: 1px dashed rgba(201,151,72,0.4);
+    border-radius: 14px;
+    padding: 18px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .portfolio-note a {
+    color: var(--gold-2);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  /* CHAIR / SHOP */
+  .chair {
+    background: var(--bg);
+  }
+  .info-card {
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 22px 20px;
+    margin-bottom: 14px;
+  }
+  .info-card .ic-label {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  .info-card .ic-value {
+    font-size: 17px;
+    color: var(--cream);
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  .info-card .ic-sub {
+    font-size: 13px; color: var(--muted); margin-top: 4px;
+  }
+
+  .hours-grid {
+    display: grid; grid-template-columns: 1fr auto; gap: 6px 12px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .hours-grid .day { color: var(--muted); }
+  .hours-grid .time { color: var(--cream); font-weight: 500; text-align: right; }
+  .hours-grid .closed { color: rgba(244,235,218,0.32); font-style: italic; }
+
+  /* SOCIALS */
+  .socials {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+  }
+  .social {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 16px 8px;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 14px; font-weight: 600;
+  }
+  .social:active { transform: scale(0.97); }
+
+  /* FINAL CTA */
+  .final {
+    text-align: center;
+    background:
+      radial-gradient(60% 60% at 50% 0%, rgba(201,151,72,0.18), transparent 70%),
+      var(--bg);
+    padding: 56px 24px 40px;
+  }
+  .final h2 { margin-bottom: 24px; }
+  .final .btn-primary { display: inline-flex; padding: 20px 44px; font-size: 16px; }
+
+  footer {
+    text-align: center;
+    padding: 28px 24px 36px;
+    border-top: 1px solid var(--line);
+    color: rgba(244,235,218,0.4);
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  footer a { color: var(--gold-2); text-decoration: none; }
+
+  @media (max-width: 360px) {
+    h1 { font-size: 46px; }
+    h2 { font-size: 28px; }
+    .niche-block p { font-size: 19px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="mark"><span class="pole">💈</span> Northridge Barber</div>
+
+    <h1>JR<span class="h1-italic">.fades</span>LA</h1>
+    <div class="handle">@jr.fadesla · The Good Vibe Barbershop</div>
+
+    <div class="niche-block">
+      <div class="label">The Lane</div>
+      <p>Texture-friendly fades.<br>Clean lines. Calm chair.</p>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://thegoodvibebarbershop78.booksy.com/ig">📅 Book Now</a>
+      <a class="btn btn-secondary" href="https://www.instagram.com/jr.fadesla/">📷 Instagram</a>
+    </div>
+
+    <div class="scroll-hint">↓ Scroll</div>
+  </header>
+
+  <!-- THE WORK -->
+  <section class="work">
+    <div class="label">The Work</div>
+    <h2>What you're <span class="em">booking</span>.</h2>
+
+    <div class="craft-grid">
+      <div class="craft">
+        <div class="name">Texture-Friendly Fades</div>
+        <div class="desc">Curly, coily, wavy — fades that respect the hair you walk in with.</div>
+      </div>
+      <div class="craft">
+        <div class="name">Clean Lines</div>
+        <div class="desc">Sharp tapers, crisp edge-ups, designs on request.</div>
+      </div>
+      <div class="craft">
+        <div class="name">Beard Architecture</div>
+        <div class="desc">Trim, shape, hot-towel finish — beard treated like the second cut.</div>
+      </div>
+      <div class="craft">
+        <div class="name">First-Time Friendly</div>
+        <div class="desc">New to the shop or new to the chair? Bring questions, not anxiety.</div>
+      </div>
+    </div>
+
+    <div class="portfolio">
+      <div class="portfolio-note">
+        See the work →<br>
+        <a href="https://www.instagram.com/jr.fadesla/">@jr.fadesla on Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE CHAIR -->
+  <section class="chair">
+    <div class="label">The Chair</div>
+    <h2>Find me at <span class="em">Good Vibe</span>.</h2>
+
+    <div class="info-card">
+      <div class="ic-label">Address</div>
+      <div class="ic-value"><a href="https://maps.apple.com/?address=9028+1/2+Balboa+Blvd,+Northridge,+CA+91325" style="color: var(--cream); text-decoration: none;">9028½ Balboa Blvd<br>Northridge, CA 91325</a></div>
+      <div class="ic-sub" style="color: var(--gold-2); margin-top: 8px;">Tap for directions →</div>
+    </div>
+
+    <div class="info-card">
+      <div class="ic-label">Shop Hours</div>
+      <div class="hours-grid">
+        <span class="day">Tue – Fri</span><span class="time">9:00 AM – 5:00 PM</span>
+        <span class="day">Saturday</span><span class="time">9:00 AM – 4:00 PM</span>
+        <span class="day">Sunday</span><span class="time closed">Closed</span>
+        <span class="day">Monday</span><span class="time closed">Closed</span>
+      </div>
+      <div class="ic-sub" style="margin-top:14px;">Booking ahead is the move. Walk-ins welcome when the chair is open.</div>
+    </div>
+
+    <div class="info-card" style="text-align:center;">
+      <div class="ic-label">Shop Phone</div>
+      <a href="tel:+18188105566" style="font-size: 22px; font-weight: 700; color: var(--gold-2); letter-spacing: 0.04em; text-decoration: none;">(818) 810-5566</a>
+    </div>
+
+    <div style="margin-top: 8px;">
+      <div class="label" style="margin-bottom: 12px;">Follow</div>
+      <div class="socials">
+        <a class="social" href="https://www.instagram.com/jr.fadesla/">📷 Instagram</a>
+        <a class="social" href="https://thegoodvibebarbershop78.booksy.com/ig">📅 Booksy</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="label">Come Get Right</div>
+    <h2>One <span class="em">tap</span><br>and you're booked.</h2>
+    <a class="btn btn-primary" href="https://thegoodvibebarbershop78.booksy.com/ig">📅 Book the Chair</a>
+    <p style="margin-top: 20px; color: var(--muted); font-size: 13px;">
+      Or call the shop · <a href="tel:+18188105566" style="color: var(--gold-2); text-decoration: none; font-weight: 600;">(818) 810-5566</a>
+    </p>
+  </section>
+
+  <footer>
+    JR.FadesLA · Barber at The Good Vibe Barbershop<br>
+    9028½ Balboa Blvd, Northridge, CA 91325<br>
+    <a href="https://www.instagram.com/jr.fadesla/">@jr.fadesla</a><br>
+    <span style="opacity:0.5;">Concept design · 2026</span>
+  </footer>
+
+</div>
+</body>
+</html>
