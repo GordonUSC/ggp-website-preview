@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0F0E0C">
+<title>The Good Vibe Barbershop · Northridge</title>
+<meta name="description" content="The most modern barbershop in the San Fernando Valley. Cuts, beard work, color, kids, locs & braids. 9028½ Balboa Blvd, Northridge.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0F0E0C;
+    --bg-2: #1A1815;
+    --cream: #F4EBDA;
+    --gold: #D4A24C;
+    --gold-2: #E9BE6E;
+    --red: #B7322C;
+    --muted: rgba(244,235,218,0.7);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.55;
+    overflow-x: hidden;
+  }
+  .wrap { max-width: 480px; margin: 0 auto; padding: 0; }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    padding: 56px 24px 40px;
+    background:
+      radial-gradient(120% 60% at 50% 0%, rgba(212,162,76,0.18) 0%, rgba(212,162,76,0) 60%),
+      linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+    text-align: center;
+    border-bottom: 1px solid rgba(212,162,76,0.15);
+  }
+  .pole {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: linear-gradient(135deg, #B7322C 0%, #FFFFFF 50%, #1F4D8B 100%);
+    box-shadow: 0 4px 24px rgba(212,162,76,0.25), inset 0 -6px 12px rgba(0,0,0,0.3);
+    margin-bottom: 18px;
+    font-size: 28px;
+  }
+  .eyebrow {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.28em;
+    font-size: 13px;
+    color: var(--gold);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+    color: var(--cream);
+  }
+  h1 .accent { color: var(--gold-2); }
+  .tagline {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 28px;
+    padding: 0 12px;
+  }
+  .cta-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    margin: 0 auto;
+  }
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 16px 14px;
+    border-radius: 999px;
+    font-weight: 600; font-size: 15px;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-2) 100%);
+    color: #1A1815;
+    box-shadow: 0 6px 18px rgba(212,162,76,0.35);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--cream);
+    border: 1px solid rgba(244,235,218,0.3);
+  }
+
+  /* SECTIONS */
+  section { padding: 44px 24px; }
+  .label {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.22em;
+    font-size: 12px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+
+  /* SIGNATURE */
+  .signature {
+    background: linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 100%);
+    border-top: 1px solid rgba(212,162,76,0.12);
+    border-bottom: 1px solid rgba(212,162,76,0.12);
+    text-align: center;
+  }
+  .signature .quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--cream);
+    line-height: 1.35;
+    padding: 0 8px;
+  }
+  .signature .quote .gold { color: var(--gold-2); }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  }
+  .svc {
+    background: var(--bg-2);
+    border: 1px solid rgba(212,162,76,0.12);
+    border-radius: 18px;
+    padding: 18px 14px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .svc:active { transform: scale(0.98); border-color: var(--gold); }
+  .svc .ico {
+    font-size: 26px; margin-bottom: 8px; display: block;
+  }
+  .svc .name {
+    font-weight: 700; font-size: 15px; color: var(--cream);
+    margin-bottom: 4px;
+  }
+  .svc .desc {
+    font-size: 12px; color: var(--muted);
+    line-height: 1.4;
+  }
+
+  /* LORENZO HIGHLIGHT */
+  .lorenzo {
+    background:
+      radial-gradient(80% 60% at 0% 50%, rgba(183,50,44,0.16) 0%, rgba(183,50,44,0) 70%),
+      var(--bg);
+    border-radius: 24px;
+    padding: 28px 22px;
+    margin: 0 24px;
+    border: 1px solid rgba(212,162,76,0.15);
+    position: relative;
+  }
+  .lorenzo .pill {
+    display: inline-block;
+    background: rgba(183,50,44,0.18);
+    color: #F2A29C;
+    border: 1px solid rgba(183,50,44,0.4);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .lorenzo h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .lorenzo p { color: var(--muted); font-size: 14px; }
+
+  /* HOURS/LOCATION */
+  .info-card {
+    background: var(--bg-2);
+    border: 1px solid rgba(212,235,218,0.08);
+    border-radius: 18px;
+    padding: 22px 20px;
+    margin-bottom: 14px;
+  }
+  .hours {
+    display: grid; grid-template-columns: 1fr auto; gap: 8px 12px;
+    font-size: 14px;
+  }
+  .hours .day { color: var(--muted); }
+  .hours .time { color: var(--cream); font-weight: 500; text-align: right; }
+  .hours .closed { color: rgba(244,235,218,0.35); font-style: italic; }
+
+  .addr {
+    display: flex; align-items: flex-start; gap: 12px;
+    color: var(--cream);
+    text-decoration: none;
+  }
+  .addr .pin {
+    font-size: 22px; line-height: 1;
+    color: var(--gold-2);
+    margin-top: 2px;
+  }
+  .addr .lines { display: flex; flex-direction: column; gap: 2px; }
+  .addr .street { font-weight: 600; font-size: 15px; }
+  .addr .city { color: var(--muted); font-size: 13px; }
+
+  /* REVIEW/SOCIAL */
+  .review {
+    background: var(--bg-2);
+    border: 1px solid rgba(212,162,76,0.18);
+    border-radius: 18px;
+    padding: 22px 20px;
+    margin-bottom: 14px;
+    position: relative;
+  }
+  .review::before {
+    content: "“";
+    position: absolute;
+    top: 4px; left: 14px;
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    line-height: 1;
+    color: var(--gold);
+    opacity: 0.4;
+  }
+  .review .body {
+    font-size: 14px; line-height: 1.5;
+    padding-left: 28px;
+    color: var(--cream);
+  }
+  .review .who {
+    margin-top: 10px; padding-left: 28px;
+    font-size: 12px; color: var(--gold-2);
+    letter-spacing: 0.05em;
+  }
+  .stars { color: var(--gold-2); letter-spacing: 2px; padding-left: 28px; font-size: 14px; }
+
+  /* SOCIAL ROW */
+  .socials {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;
+    margin-top: 16px;
+  }
+  .social {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 14px 8px;
+    background: var(--bg-2);
+    border: 1px solid rgba(244,235,218,0.1);
+    border-radius: 14px;
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 13px; font-weight: 600;
+  }
+  .social:active { transform: scale(0.97); }
+
+  /* FINAL CTA */
+  .final {
+    text-align: center;
+    background:
+      radial-gradient(60% 60% at 50% 0%, rgba(212,162,76,0.18), transparent 70%),
+      var(--bg);
+    padding: 48px 24px 36px;
+  }
+  .final h2 { margin-bottom: 18px; }
+  .final .btn-primary { display: inline-flex; padding: 18px 40px; }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 28px 24px 40px;
+    border-top: 1px solid rgba(244,235,218,0.08);
+    color: rgba(244,235,218,0.4);
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  footer a { color: var(--gold-2); text-decoration: none; }
+
+  /* Small phones */
+  @media (max-width: 360px) {
+    h1 { font-size: 32px; }
+    .signature .quote { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="pole">💈</div>
+    <div class="eyebrow">Northridge · Est. San Fernando Valley</div>
+    <h1>The <span class="accent">Good Vibe</span><br>Barbershop</h1>
+    <p class="tagline">The Valley's most modern barbershop.<br>Cuts, color, beards, kids, locs &amp; braids — done right, with a hot towel.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://booksy.com/en-us/575577_the-good-vibe-barbershop_barber-shop_134655_los-angeles">📅 Book Now</a>
+      <a class="btn btn-secondary" href="tel:+18188105566">📞 Call</a>
+    </div>
+  </header>
+
+  <!-- SIGNATURE -->
+  <section class="signature">
+    <div class="label">The Signature</div>
+    <p class="quote">A traditional cut, finished with <span class="gold">hot lather &amp; hot towel</span>.<br>The 5-minute reset built into every chair.</p>
+  </section>
+
+  <!-- SERVICES -->
+  <section>
+    <div class="label">Services</div>
+    <h2>Everyone in your house, in one chair.</h2>
+    <div class="services-grid">
+      <div class="svc"><span class="ico">✂️</span><div class="name">Haircuts</div><div class="desc">Classic, modern, fades, tapers — all heads, all ages.</div></div>
+      <div class="svc"><span class="ico">🪒</span><div class="name">Beard Work</div><div class="desc">Precise trims, hot lather, hot towel finish.</div></div>
+      <div class="svc"><span class="ico">🎨</span><div class="name">Color &amp; Style</div><div class="desc">Coloring, styling, waxing — full salon services.</div></div>
+      <div class="svc"><span class="ico">👶</span><div class="name">Kids' Cuts</div><div class="desc">Patient, kind, calm. First-cut friendly.</div></div>
+      <div class="svc"><span class="ico">🌀</span><div class="name">Locs &amp; Braids</div><div class="desc">Licensed locticians and braiders on staff.</div></div>
+      <div class="svc"><span class="ico">✨</span><div class="name">Self-Care</div><div class="desc">Walk-in welcome. The whole shop is built around the vibe.</div></div>
+    </div>
+  </section>
+
+  <!-- LORENZO -->
+  <section style="padding-top: 0;">
+    <div class="lorenzo">
+      <div class="pill">★ Customer Favorite</div>
+      <h3>Lorenzo's First-Cut Promise</h3>
+      <p>Bringing a kid in for the first time? Ask for Lorenzo. Patience, calm, and the kind of attention to detail every parent wants — guaranteed.</p>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section>
+    <div class="label">What People Say</div>
+    <h2>Talented, kind, and worth the drive.</h2>
+
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p class="body">Lorenzo is so patient and meticulous, especially with kids. There are places charging twice as much that don't do anywhere near as good a job.</p>
+      <p class="who">— Verified Customer · Yelp</p>
+    </div>
+
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p class="body">Filled with extremely talented and kind people. The whole shop has a vibe — you walk in tense and walk out lighter.</p>
+      <p class="who">— Verified Customer</p>
+    </div>
+  </section>
+
+  <!-- HOURS / LOCATION -->
+  <section style="padding-top: 0;">
+    <div class="label">Visit</div>
+    <h2>Drop in. Or book ahead.</h2>
+
+    <div class="info-card">
+      <a class="addr" href="https://maps.apple.com/?address=9028+1/2+Balboa+Blvd,+Northridge,+CA+91325">
+        <span class="pin">📍</span>
+        <span class="lines">
+          <span class="street">9028½ Balboa Blvd</span>
+          <span class="city">Northridge, CA 91325</span>
+          <span class="city" style="margin-top:6px; color: var(--gold-2); font-weight: 600;">Tap for directions →</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="info-card">
+      <div class="hours">
+        <span class="day">Tue – Fri</span><span class="time">9:00 AM – 5:00 PM</span>
+        <span class="day">Saturday</span><span class="time">9:00 AM – 4:00 PM</span>
+        <span class="day">Sunday</span><span class="time closed">Closed</span>
+        <span class="day">Monday</span><span class="time closed">Closed</span>
+      </div>
+    </div>
+
+    <div class="info-card" style="text-align:center;">
+      <div style="font-size:22px; font-weight:700; color: var(--gold-2); letter-spacing:0.04em;">(818) 810-5566</div>
+      <div style="font-size:13px; color: var(--muted); margin-top:6px;">Walk-ins welcome · Online booking preferred</div>
+    </div>
+
+    <div class="socials">
+      <a class="social" href="https://www.instagram.com/thegoodvibebarbershop/">📷 Instagram</a>
+      <a class="social" href="https://www.tiktok.com/@thegoodvibebarbers">🎵 TikTok</a>
+      <a class="social" href="https://booksy.com/en-us/575577_the-good-vibe-barbershop_barber-shop_134655_los-angeles">📅 Booksy</a>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="label">Come Get Right</div>
+    <h2>Your next cut<br>is two taps away.</h2>
+    <a class="btn btn-primary" href="https://booksy.com/en-us/575577_the-good-vibe-barbershop_barber-shop_134655_los-angeles">📅 Book Your Chair</a>
+    <p style="margin-top: 18px; color: var(--muted); font-size: 13px;">Or call <a href="tel:+18188105566" style="color:var(--gold-2); text-decoration:none; font-weight:600;">(818) 810-5566</a></p>
+  </section>
+
+  <footer>
+    The Good Vibe Barbershop · 9028½ Balboa Blvd, Northridge, CA 91325<br>
+    <a href="tel:+18188105566">(818) 810-5566</a> ·
+    <a href="https://www.instagram.com/thegoodvibebarbershop/">@thegoodvibebarbershop</a><br>
+    <span style="opacity:0.5;">Concept design · 2026</span>
+  </footer>
+
+</div>
+</body>
+</html>
